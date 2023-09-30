@@ -11,11 +11,12 @@ import java.util.List;
 @Table(name = "SESSIONS")
 @Getter
 @Setter
-public class Session {
+public class TrainingSession {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Long id;
+    private long id;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE")
@@ -24,6 +25,6 @@ public class Session {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @OneToMany(mappedBy = "session")
+    @OneToMany(mappedBy = "trainingSession", cascade = CascadeType.PERSIST)
     private List<Exercise> exercises;
 }
