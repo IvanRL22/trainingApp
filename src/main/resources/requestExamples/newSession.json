@@ -1,0 +1,27 @@
+/*
+  Example of a newSession with 1 exercise: Bench Press for 1RM@100Kg + 2x2@90Kg
+*/
+{
+  "date": "2023-09-30",
+  "description": "TEST",
+  "exercises": [
+    {
+      "sets": [
+        {
+          "repetitions": 1,
+          "weight": 100
+        }, {
+          "repetitions": 2,
+          "weight": 90
+        }, {
+          "repetitions": 2,
+          "weight": 90
+        }
+      ],
+      "movement": {
+        "id": 1,
+        "name": "Bench Press"
+      }
+    }
+  ]
+}
